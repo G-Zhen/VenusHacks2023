@@ -17,6 +17,7 @@ Back-end:
 <h1> Git basics for members </h1>
 Download Repo:
 * git clone [url: grab the url from the green "<> Code" button]
+* move to repo, go to terminal and type: cd VenusHacks2023 
 
 Upload Changes you made for everyone to see:
 1. Check if you have anything to upload: git status
