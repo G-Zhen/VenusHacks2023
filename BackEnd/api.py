@@ -1,5 +1,6 @@
 #First go to terminal and install: pip install requests
 import requests
+import json_formatting
 # API info
 #lchakhoy@uci.edu
 #Pass: #5456LILYAc2024
@@ -9,6 +10,7 @@ APIpass = "5456LILYAc2024"
 APIkey = "07a51a8ae2df4713b2c2fbe8b9607f50"
 API_URL = "https://api.spoonacular.com/food/search"
 
+
 params = {
     "apiKey": APIkey
 }
@@ -16,3 +18,5 @@ params = {
 response = requests.get(API_URL, params=params)
 print(response.status_code)
 
+results = json_formatting.Results(response)
+results.parse()
