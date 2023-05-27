@@ -1,36 +1,36 @@
-body{
-  margin:5;
+body {
+  margin: 5;
   font-family: auto;
   font-size: 17px;
   color: #ebe6e2;
-  line-height:1.6;
+  line-height: 1.6;
 }
 
-
-#welcome{
-  background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80');
-  background-size:cover;
-  background-position:center;
-  height:100vh;
-  display:flex;
+#welcome {
+  background-image: url("https://images.unsplash.com/photo-1555813456-94a3dd418cd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1326&q=80");
+  background-size: cover;
+  filter: brightness(50%);
+  background-position: center;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  padding:0 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
 }
 
-#welcome h1{
-  font-size:60px;
+#welcome h1 {
+  font-size: 60px;
 }
 
-#welcome p{
-  font-size:30px;
+#welcome p {
+  font-size: 30px;
 }
 
-#welcome .button{
-  font-size:20px;
-  text-decoration:none;
-  color:#ebe6e2;
-  border:#ebe6e2 2px solid;
+#welcome .button {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ebe6e2;
+  border: #ebe6e2 2px solid;
   padding: 10px 20px;
 }
