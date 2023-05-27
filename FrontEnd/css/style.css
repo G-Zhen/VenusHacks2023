@@ -34,3 +34,15 @@ body {
   border: #ebe6e2 2px solid;
   padding: 10px 20px;
 }
+
+.result-item{
+  color: #2064e2;
+  /* background-color: green; */
+
+}
+
+.result-item p a {
+  pointer-events: none;
+  text-decoration: none;
+  color: #2064e2;
+}
