@@ -13,7 +13,7 @@ API_URL = "https://api.spoonacular.com/food/search"
 
 @app.route('/')
 def index():
-    return jsonify({"name": "meal"}) #our index is homepage.html
+    return jsonify({"name": "meal"}) #arbitrary dictionary for now
 
 @app.route('/search', methods=['POST'])
 def search():
