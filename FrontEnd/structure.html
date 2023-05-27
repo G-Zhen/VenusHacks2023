@@ -30,11 +30,10 @@
     }
 
     .button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px; /* Adjust the margin as needed */
-  }
-
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px; /* Adjust the margin as needed */
+    }
   </style>
   <script src="index.js"></script>
 </head>
@@ -132,7 +131,8 @@
       // Implement your API query using the generated keyword here
       console.log("API query with keyword: " + keyword);
       // Construct the API URL with the keyword parameter
-      var apiUrl = "https://api.spoonacular.com/food/search?apiKey=07a51a8ae2df4713b2c2fbe8b9607f50&query=" + encodeURIComponent(keyword) + "&number=10";
+      var apiUrl = " http://127.0.0.1:8000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+
       // Send the GET request to the API
       fetch(apiUrl)
         .then(response => response.json())
@@ -147,26 +147,23 @@
         });  
     });
 
-    function displayResults(data) {
+    function displayResults(searchResults) {
       var resultsContainer = document.getElementById("results-container");
       // Clear previous results
       resultsContainer.innerHTML = "";
       // Process the data and generate the HTML content for each result
       var html = "";
-      for (var i = 0; i < data.searchResults.length; i++) {
-        var result = data.searchResults[i];
+      for (const [title, data] of Object.entries(searchResults)){
         html += "<div class='result-item'>";
-        html += "<h3>" + result.title + "</h3>";
+        html += "<h3>" + title + "</h3>";
         // Include other relevant data from the API response
-        html += "<p>" + result.description + "</p>";
+        html += "<p>" + data[2] + "</p>"; //data[2] actual data
         html += "</div>";
       }
-      console.log(data, html)
       // Update the results container with the generated HTML content
       resultsContainer.innerHTML = html;
     }
   </script>
   
 </body>
-
 </html>
