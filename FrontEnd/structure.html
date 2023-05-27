@@ -8,8 +8,8 @@
   <title>Meal Planning 2</title>
   <style>
     .circle-button{
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
       background: #9ec4bd;
       display: inline-flex;
       align-items: center;
@@ -24,13 +24,20 @@
     .circle-button:hover{
       background: #767a79;
     }
+
+    .circle-button ion-icon{
+      font-size:150px;
+    }
+
   </style>
 </head>
 <body>
-  <a class= "circle-button" href="./go-to-breakfast-options">
-    <ion-icon name="cafe-outline" size ="large" ></ion-icon>
-  </a>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+  <a id="breakfast" class= "circle-button" href="./go-to-breakfast-options">
+    <img src="file:///Users/jamiephan/Downloads/cafe-outline.svg"
+  width = "60px"
+  height = "60px"
+    >
+  <script src="index.js"></script>
 </body>
+
 </html>
