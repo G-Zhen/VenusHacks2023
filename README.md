@@ -1,6 +1,6 @@
 # VenusHacks2023
 
-<h1> {Project title} </h1>
+<h1> MealsForMe </h1>
 Weekly meal budget planner. 
 
 <h2> Front-end </h2>
