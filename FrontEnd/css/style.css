@@ -36,20 +36,24 @@ body {
 
 #welcome .button {
   font-size: 40px;
-  text-decoration: none;
   color: #000000;
   border: #eae5e5 2px solid;
   padding: 10px 20px;
-  border-radius: 100%;
+  border-radius: 10%;
   display: inline-flex;
-  text-decoration: none;
+  text-decoration: none; 
   cursor: pointer;
-  background: #eae5e5;
+  background: #ebedeb;
+}
+#welcome button:hover {
+  text-decoration: none;
+  color: rgb(63, 154, 184);
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: #9ec4bd;
+  text-decoration: none;
+  color: rgb(63, 154, 184);
 }
 
 .result-item button {
