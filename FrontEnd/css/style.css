@@ -19,13 +19,13 @@ body {
 }
 
 #welcome h1 {
-  font-size: 200px;
+  font-size: 100px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
 
 #welcome p {
-  font-size: 70px;
+  font-size: 50px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -38,7 +38,7 @@ body {
   padding: 10px 20px;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
