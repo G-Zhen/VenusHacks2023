@@ -41,19 +41,19 @@
   <body>
     <header id="welcome">
       <h1>Meals4Me</h1>
-      <!--<a type="submit" onClick="myFunction()" value="HOME" class="button"
-        >Get Cooking</a
-      >-->
-      <div class = "pill-container">
-      <button class="pill" type="submit" onClick="myFunction()" value="HOME">Our Mission</button>
-      <button class="pill pill--selected" type="submit" onClick="myFunction()" value = "HOME">Get Cooking</button>
-    </div>
+      <div class="pill-container">
+        <button class="pill" type="submit" onclick="navigateToAboutUs()">Our Mission</button>
+        <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Get Cooking</button>
+      </div>
       <script>
+        function navigateToAboutUs() {
+          window.location.href = "aboutUs.html";
+        }
+  
         function myFunction() {
           window.location.href = "structure.html";
         }
       </script>
     </header>
   </body>
-
 </html>
