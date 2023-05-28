@@ -38,6 +38,10 @@ body {
   padding: 10px 20px;
 }
 
+.button:hover{
+  cursor: pointer;
+}
+
 .result-item {
   color: #2064e2;
   margin: 10px;
