@@ -7,7 +7,7 @@ body {
 }
 
 #welcome {
-  background-image: url("../images/home.png");
+  background-image: url("../images/homepage.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
