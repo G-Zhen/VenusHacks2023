@@ -23,11 +23,10 @@ body {
 
 #welcome h1 {
   font-size: 150px;
-  line-height: 10pt;
+  line-height: 40pt;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
   background-color: #edff49;
-
 }
 
 #welcome p {
@@ -35,7 +34,6 @@ body {
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
   background-color: #edff49;
-
 }
 
 #welcome .button {
@@ -45,7 +43,7 @@ body {
   padding: 10px 20px;
   border-radius: 10%;
   display: inline-flex;
-  text-decoration: none; 
+  text-decoration: none;
   cursor: pointer;
   background: #ebedeb;
 }
