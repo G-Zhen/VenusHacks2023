@@ -69,17 +69,19 @@
 
     <!-- <script src="index.js"></script> -->
     <script>
-      document
-        .getElementById("breakfast")
-        .addEventListener("click", function () {
+      // Function to scroll to the results container
+      function scrollToResults() {
+        var resultsContainer = document.getElementById("results-container");
+        resultsContainer.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Event listeners for the buttons
+      document.getElementById("breakfast").addEventListener("click", function () {
           var keyword = "breakfast";
           // Implement your API query using the generated keyword here
           console.log("API query with keyword: " + keyword);
           // Construct the API URL with the keyword parameter
-          var apiUrl =
-            " http://127.0.0.1:5000/search?query=" +
-            encodeURIComponent(keyword) +
-            "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+          var apiUrl =" http://127.0.0.1:5000/search?query=" +encodeURIComponent(keyword) +"&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
           // Send the GET request to the API
           fetch(apiUrl)
             .then((response) => response.json())
@@ -88,6 +90,7 @@
               console.log(data);
               displayResults(data);
               // Further processing of the data
+              scrollToResults();
             })
             .catch((error) => {
               console.log("An error occurred:", error);
@@ -98,11 +101,9 @@
         var keyword = "lunch";
         // Implement your API query using the generated keyword here
         console.log("API query with keyword: " + keyword);
+        scrollToResults();
         // Construct the API URL with the keyword parameter
-        var apiUrl =
-          " http://127.0.0.1:5000/search?query=" +
-          encodeURIComponent(keyword) +
-          "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+        var apiUrl = " http://127.0.0.1:5000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
         // Send the GET request to the API
         fetch(apiUrl)
           .then((response) => response.json())
@@ -111,6 +112,7 @@
             console.log(data);
             displayResults(data);
             // Further processing of the data
+            scrollToResults();
           })
           .catch((error) => {
             console.log("An error occurred:", error);
@@ -134,6 +136,7 @@
             console.log(data);
             displayResults(data);
             // Further processing of the data
+            scrollToResults();
           })
           .catch((error) => {
             console.log("An error occurred:", error);
@@ -158,6 +161,7 @@
             console.log(data);
             displayResults(data);
             // Further processing of the data
+            scrollToResults();
           })
           .catch((error) => {
             console.log("An error occurred:", error);
