@@ -5,15 +5,26 @@ Daily meal planner for breakfast, lunch, dinner, snacks.
 Navigating college life is difficult, to say the least. What's even harder is navigating it with an empty stomach. That's why we created Meals4Me. 
 Meals4Me helps students, or anyone, with choosing a meal for the day whether you're craving breakfast, lunch, dinner, or a snack. We hope this will encourages users to stay healthy and well-fed.
 
+<h3> Members </h3>
+Grace Zhen, Jamie Phan, Sabrina Tang, Lilya Chakhoyan
 
 <h2> Front-end </h2>
 Web app
 
 <h2> Back-end </h2>
-spoonacular recipe and food API: https://spoonacular.com/food-api 
+spoonacular recipe and food API: https://spoonacular.com/food-api <br />
+Requirements: Python 3 <br />
+Run: 
 
-<h3> Members </h3>
-Grace Zhen, Jamie Phan, Sabrina Tang, Lilya Chakhoyan
+```
+cd BackEnd
+pip install -r requirements.txt
+source venv/bin/activate
+python app.py
+
+```
+After running app.py, run homepage.html file. 
+
 
 <h1> Git basics for members </h1>
 <h3> Setup </h3>

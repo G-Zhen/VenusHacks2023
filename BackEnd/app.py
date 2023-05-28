@@ -5,12 +5,16 @@ import requests
 from flask import Flask, render_template, request, jsonify, Response
 from json_formatting import Results
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-APIpass = "5456LILYAc2024"
-APIkey = "07a51a8ae2df4713b2c2fbe8b9607f50"
+APIpass = os.getenv('APIpass')
+APIkey = os.getenv('APIkey')
 API_URL = "https://api.spoonacular.com/food/search"
 
 @app.route('/')
