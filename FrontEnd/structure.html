@@ -8,37 +8,61 @@
     <title>Create Meals4Me</title>
     <style>
       .circle-button {
-        width: 200px;
-        height: 200px;
-        background: #9ec4bd;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 100%;
-        border: none;
-        text-decoration: none;
-        transition: background 0.2s;
-      }
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: #9ec4bd;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 100%;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin: 70px;
+      padding: 5px;
+    }
 
-      .circle-button:hover {
-        background: #767a79;
-        font-size: 12px;
-      }
+    .circle-button::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
+      font-size: 14px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0s;
+    }
 
-      .circle-button ion-icon {
-        font-size: 175px;
-      }
+    .circle-button:hover {
+      background: #767a79;
+      font-size: 12px;
+    }
 
-      .circle-button {
-        margin: 70px; /* decrease the margin */
-        padding: 5px; /* decrease the padding */
-      }
+    .circle-button:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
 
-      .button-container {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 175px; /* Adjust the margin as needed */
+    .circle-button:not(:hover)::after {
+      transition-delay: 0s; /* Reduce the delay for the first hover text */
+    }
+
+    .circle-button ion-icon {
+      font-size: 175px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 175px;
       }
     </style>
     <script src="index.js"></script>
@@ -46,19 +70,19 @@
 
   <body>
     <div class="button-container">
-      <button id="breakfast" class="circle-button">
+      <button id="breakfast" class="circle-button" title="Breakfast">
         <img src="images/cafe-outline.svg" width="50px" height="50px" />
       </button>
 
-      <button id="lunch" class="circle-button">
+      <button id="lunch" class="circle-button" title="Lunch">
         <img src="images/fast-food-outline.svg" width="50px" height="50px" />
       </button>
 
-      <button id="dinner" class="circle-button">
+      <button id="dinner" class="circle-button" title="Dinner">
         <img src="images/restaurant-outline.svg" width="50px" height="50px" />
       </button>
 
-      <button id="snack" class="circle-button">
+      <button id="snack" class="circle-button" title="Snack">
         <img src="images/pizza-outline.svg" width="50px" height="50px" />
       </button>
     </div>
