@@ -26,14 +26,14 @@ body {
   line-height: 40pt;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
-  background-color: #edff49;
+  background-color: #eaeaea;
 }
 
 #welcome p {
   font-size: 30px;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
-  background-color: #bcbcbbec;
+  background-color: #ecececec;
 }
 
 #welcome .button {
