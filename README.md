@@ -15,7 +15,7 @@ Web app
 spoonacular recipe and food API: https://spoonacular.com/food-api <br />
 Requirements: Python 3 <br />
 You must always run app.py for the buttons in our Create Meals4Me page. 
-Run app.py: 
+Run app.py (for Mac OS): 
 
 ```
 cd BackEnd
