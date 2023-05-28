@@ -45,7 +45,7 @@
   <body>
     <header id="mission">
     <div id="missionhead">
-      <button class="pill" type="submit" onclick="navigateToAboutUs()">Back</button> <h1>Our Mission</h1> <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Get Cooking</button>
+      <button class="pill" type="submit" onclick="home()">Back</button> <h1>Our Mission</h1> <button class="pill pill--selected" type="submit" onClick="meals()" value="HOME">Get Cooking</button>
   </div>
       <p>
         Navigating college life can be a challenging endeavor, and one
@@ -59,12 +59,36 @@
       </p>
     <h2> Collaborators </h2>
     <div class="pill-container">
-      <button class="pill" type="submit" onclick="navigateToAboutUs()">Jamie Phan</button>
-      <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Sabrina Tang</button>
+      <button class="pill" type="submit" onclick="jamie()">Jamie Phan</button>
+      <button class="pill pill--selected" type="submit" onClick="sabrina()" value="HOME">Sabrina Tang</button>
     </div>
     <div class="pill-container">
-      <button class="pill" type="submit" onclick="navigateToAboutUs()">Grace Zhen</button>
-      <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Lilya Chakhoyan</button>
+      <button class="pill" type="submit" onclick="grace()">Grace Zhen</button>
+      <button class="pill pill--selected" type="submit" onClick="lilya()" value="HOME">Lilya Chakhoyan</button>
     </div>
+    <script>
+      function home() {
+        window.location.href = "homepage.html"
+      }
+      function meals() {
+        window.location.href = "structure.html"
+      }
+      function jamie() {
+        //opens in current page
+        // window.location.href = "https://www.linkedin.com/in/phanjam/"
+        //opens in separate page
+        window.open("https://www.linkedin.com/in/phanjam/", "_blank");
+      }
+      function grace() {
+        window.open("https://www.linkedin.com/in/grace-zhen/", "_blank");
+      }
+      function sabrina() {
+        window.open("https://www.linkedin.com/in/sabrinat162/", "_blank");
+      }
+      function lilya() {
+        window.open("https://www.linkedin.com/in/lchakhoyan/", "_blank");
+      }
+    </script>
     </header>
     </body>
+</html>
