@@ -62,3 +62,22 @@ body {
   text-decoration: none;
   color: #2064e2;
 }
+
+.results-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.results-container.hidden {
+  opacity: 0;
+}
+
+.results-container .result-item {
+  text-align: center;
+  margin-bottom: 5px;
+}
