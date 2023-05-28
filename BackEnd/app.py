@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, jsonify, Response
 from json_formatting import Results
 from flask_cors import CORS
 from dotenv import load_dotenv
+import random #for random queries
 
 load_dotenv()
 import os
@@ -39,6 +40,14 @@ def search():
         results.parse()
         recipes = results._recipes
         return jsonify(recipes)
+        # results = Results(response)
+        # results.parse()
+        # recipes = results._recipes
+        # # Randomize the order of recipes
+        # random.shuffle(recipes)
+        # # Return a subset of randomized recipes 
+        # randomized_recipes = recipes #recipes[:5](e.g., 5 recipes)
+        #return jsonify(randomized_recipes)
     else:
         errorResponse = jsonify({"detail": "Error occurred. Status code: " + str(response.status_code)})
         errorResponse.status = response.status_code
