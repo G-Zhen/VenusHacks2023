@@ -7,22 +7,47 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Meals4Me</title>
   </head>
+  <style>
+    .pill-container {
+        margin-top:0px;
+        display: flex;
+        justify-content: center;
+      }
+
+    .pill{
+      font-size: 38px;
+      font-family: "Bellota Text", cursive;
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      border-radius:1em;
+      border:none;
+      outline:none;
+      background: rgb(255, 255, 255);
+      cursor:pointer;
+    }
+
+    .pill:not(.pill--selected)hover{
+      background: #cccccc;
+    }
+
+    .pill--selected{
+      font-family: "Bellota Text", cursive;
+      background: #000000;
+      color: #fff;
+
+    }
+
+  </style>
   <body>
     <header id="welcome">
       <h1>Meals4Me</h1>
-      <p>
-        Navigating college life can be a challenging endeavor, and one
-        additional hurdle is finding sustenance when hunger strikes. This is
-        where Meals4Me steps in to lend a helping hand. Meals4Me is a
-        user-friendly platform designed to assist students, as well as anyone
-        else, in selecting their daily meals, be it breakfast, lunch, dinner, or
-        even a snack. Our mission is to promote the importance of maintaining a
-        healthy and well-fed lifestyle, empowering users to make nutritious
-        choices that fuel their bodies and support their overall well-being.
-      </p>
-      <a type="submit" onClick="myFunction()" value="HOME" class="button"
+      <!--<a type="submit" onClick="myFunction()" value="HOME" class="button"
         >Get Cooking</a
-      >
+      >-->
+      <div class = "pill-container">
+      <button class="pill" type="submit" onClick="myFunction()" value="HOME">Our Mission</button>
+      <button class="pill pill--selected" type="submit" onClick="myFunction()" value = "HOME">Get Cooking</button>
+    </div>
       <script>
         function myFunction() {
           window.location.href = "structure.html";
@@ -30,4 +55,5 @@
       </script>
     </header>
   </body>
+
 </html>
