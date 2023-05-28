@@ -109,9 +109,9 @@ body {
 
 .result-item button {
   font-size: 25px;
-  background: rgb(215, 231, 224);
+  background: #9ec4bd;
   border: none;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 15px;
@@ -121,7 +121,8 @@ body {
 
 .result-item button:hover {
   text-decoration: none;
-  color: rgb(63, 154, 184);
+  background-color: #4f786d;
+  color:#ffffff
 }
 
 .result-item p a {
