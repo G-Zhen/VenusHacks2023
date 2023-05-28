@@ -168,7 +168,24 @@
           });
       });
 
-      function displayResults(searchResults) {
+      // function displayResults(searchResults) {
+      //   var resultsContainer = document.getElementById("results-container");
+      //   // Clear previous results
+      //   resultsContainer.innerHTML = "";
+      //   // Process the data and generate the HTML content for each result
+      //   var html = "";
+      //   for (const [title, data] of Object.entries(searchResults)) {
+      //     html += "<div class='result-item'>";
+      //     //data[0] = image, data[1] = link to actual recipe site, data[2] = recipe summary
+      //     html += `<a href=${data[1]}><h3>` + title + "</h3></a>";
+      //     // Include other relevant data from the API response
+      //     //html += "<p>" + data[0] + "</p>";
+      //     html += "</div>";
+      //   }
+      //   // Update the results container with the generated HTML content
+      //   resultsContainer.innerHTML = html;
+      // }
+      function displayResults(searchResults) { //turn into button instead
         var resultsContainer = document.getElementById("results-container");
         // Clear previous results
         resultsContainer.innerHTML = "";
@@ -176,14 +193,15 @@
         var html = "";
         for (const [title, data] of Object.entries(searchResults)) {
           html += "<div class='result-item'>";
-          //data[0] = image, data[1] = link to actual recipe site, data[2] = recipe summary
-          html += `<a href=${data[1]}><h3>` + title + "</h3></a>";
-          // Include other relevant data from the API response
-          //html += "<p>" + data[0] + "</p>";
+          html += "<button onclick='navigateToRecipe(\"" + data[1] + "\")'>" + title + "</button>";
           html += "</div>";
         }
         // Update the results container with the generated HTML content
         resultsContainer.innerHTML = html;
+      }
+
+      function navigateToRecipe(url) {
+        window.open(url, "_blank");
       }
     </script>
   </body>
