@@ -1,173 +1,185 @@
-<!DOCTYPE html> 
-<html lang = "en">
-<head>
-  <meta charset = "UTF-8">
-  <meta name= "viewport" content = "width=device-width, initial-scale =1.0">
-  <meta htt[-equiv]="X-UA-Compatible" content = "ie=edge">
-  <link rel = "stylesheet" href = "css/style.css">
-  <title>Create Meals4Me</title>
-  <style>
-    .circle-button{
-      width: 200px;
-      height: 200px;
-      background: #9ec4bd;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 100%;
-      border:none;
-      text-decoration:none;
-      transition: background 0.2s;
-    }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0" />
+    <meta htt[-equiv]="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Create Meals4Me</title>
+    <style>
+      .circle-button {
+        width: 200px;
+        height: 200px;
+        background: #9ec4bd;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 100%;
+        border: none;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
 
-    .circle-button:hover{
-      background: #767a79;
-    }
+      .circle-button:hover {
+        background: #767a79;
+      }
 
-    .circle-button ion-icon{
-      font-size:175px;
-    }
+      .circle-button ion-icon {
+        font-size: 175px;
+      }
 
-    .circle-button {
-    margin: 70px; /* decrease the margin */
-    padding: 5px; /* decrease the padding */
-    }
+      .circle-button {
+        margin: 70px; /* decrease the margin */
+        padding: 5px; /* decrease the padding */
+      }
 
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 175px; /* Adjust the margin as needed */
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
 
-    .button-container {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 175px; /* Adjust the margin as needed */
-    }
-  </style>
-  <script src="index.js"></script>
-</head>
+  <body>
+    <div class="button-container">
+      <button id="breakfast" class="circle-button">
+        <img src="images/cafe-outline.svg" width="50px" height="50px" />
+      </button>
 
-<body>
-  <div class="button-container">
-    <button id="breakfast" class="circle-button">
-      <img src="images/cafe-outline.svg" width="50px" height="50px">
-    </button>
-  
-    <button id="lunch" class="circle-button">
-      <img src="images/fast-food-outline.svg" width="50px" height="50px">
-    </button>
-  
-    <button id="dinner" class="circle-button">
-      <img src="images/restaurant-outline.svg" width="50px" height="50px">
-    </button>
-  
-    <button id="snack" class="circle-button">
-      <img src="images/pizza-outline.svg" width="50px" height="50px">
-    </button>
-  </div>
+      <button id="lunch" class="circle-button">
+        <img src="images/fast-food-outline.svg" width="50px" height="50px" />
+      </button>
+
+      <button id="dinner" class="circle-button">
+        <img src="images/restaurant-outline.svg" width="50px" height="50px" />
+      </button>
+
+      <button id="snack" class="circle-button">
+        <img src="images/pizza-outline.svg" width="50px" height="50px" />
+      </button>
+    </div>
 
     <div id="results-container">
-    <!-- Results will be dynamically added here -->
-  </div>
-  
-  <!-- <script src="index.js"></script> -->
-  <script>
-    document.getElementById("breakfast").addEventListener("click", function() {
-      var keyword = "breakfast";
-      // Implement your API query using the generated keyword here
-      console.log("API query with keyword: " + keyword);
-      // Construct the API URL with the keyword parameter
-      var apiUrl = " http://127.0.0.1:5000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
-      // Send the GET request to the API
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          // Handle the API response data
-          console.log(data);
-          displayResults(data )
-          // Further processing of the data
-        })
-        .catch(error => {
-          console.log("An error occurred:", error);
-        });  
-    });
+      <!-- Results will be dynamically added here -->
+    </div>
 
-    document.getElementById("lunch").addEventListener("click", function() {
-      var keyword = "lunch";
-      // Implement your API query using the generated keyword here
-      console.log("API query with keyword: " + keyword);
-      // Construct the API URL with the keyword parameter
-      var apiUrl = " http://127.0.0.1:5000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
-      // Send the GET request to the API
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          // Handle the API response data
-          console.log(data);
-          displayResults(data )
-          // Further processing of the data
-        })
-        .catch(error => {
-          console.log("An error occurred:", error);
-        });  
-    });
+    <!-- <script src="index.js"></script> -->
+    <script>
+      document
+        .getElementById("breakfast")
+        .addEventListener("click", function () {
+          var keyword = "breakfast";
+          // Implement your API query using the generated keyword here
+          console.log("API query with keyword: " + keyword);
+          // Construct the API URL with the keyword parameter
+          var apiUrl =
+            " http://127.0.0.1:5000/search?query=" +
+            encodeURIComponent(keyword) +
+            "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+          // Send the GET request to the API
+          fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+              // Handle the API response data
+              console.log(data);
+              displayResults(data);
+              // Further processing of the data
+            })
+            .catch((error) => {
+              console.log("An error occurred:", error);
+            });
+        });
 
-    document.getElementById("dinner").addEventListener("click", function() {
-      var keyword = "dinner";
-      // Implement your API query using the generated keyword here
-      console.log("API query with keyword: " + keyword);
-      // Construct the API URL with the keyword parameter
-      var apiUrl = " http://127.0.0.1:5000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
-      // Send the GET request to the API
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          // Handle the API response data
-          console.log(data);
-          displayResults(data )
-          // Further processing of the data
-        })
-        .catch(error => {
-          console.log("An error occurred:", error);
-        });  
-    });
+      document.getElementById("lunch").addEventListener("click", function () {
+        var keyword = "lunch";
+        // Implement your API query using the generated keyword here
+        console.log("API query with keyword: " + keyword);
+        // Construct the API URL with the keyword parameter
+        var apiUrl =
+          " http://127.0.0.1:5000/search?query=" +
+          encodeURIComponent(keyword) +
+          "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+        // Send the GET request to the API
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            // Handle the API response data
+            console.log(data);
+            displayResults(data);
+            // Further processing of the data
+          })
+          .catch((error) => {
+            console.log("An error occurred:", error);
+          });
+      });
 
-    document.getElementById("snack").addEventListener("click", function() {
-      var keyword = "snack";
-      // Implement your API query using the generated keyword here
-      console.log("API query with keyword: " + keyword);
-      // Construct the API URL with the keyword parameter
-      var apiUrl = " http://127.0.0.1:5000/search?query=" + encodeURIComponent(keyword) + "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+      document.getElementById("dinner").addEventListener("click", function () {
+        var keyword = "dinner";
+        // Implement your API query using the generated keyword here
+        console.log("API query with keyword: " + keyword);
+        // Construct the API URL with the keyword parameter
+        var apiUrl =
+          " http://127.0.0.1:5000/search?query=" +
+          encodeURIComponent(keyword) +
+          "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
+        // Send the GET request to the API
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            // Handle the API response data
+            console.log(data);
+            displayResults(data);
+            // Further processing of the data
+          })
+          .catch((error) => {
+            console.log("An error occurred:", error);
+          });
+      });
 
-      // Send the GET request to the API
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          // Handle the API response data
-          console.log(data);
-          displayResults(data )
-          // Further processing of the data
-        })
-        .catch(error => {
-          console.log("An error occurred:", error);
-        });  
-    });
+      document.getElementById("snack").addEventListener("click", function () {
+        var keyword = "snack";
+        // Implement your API query using the generated keyword here
+        console.log("API query with keyword: " + keyword);
+        // Construct the API URL with the keyword parameter
+        var apiUrl =
+          " http://127.0.0.1:5000/search?query=" +
+          encodeURIComponent(keyword) +
+          "&number=3"; //don't have actual url to api and api key available in client side. Use the flask given link
 
-    function displayResults(searchResults) {
-      var resultsContainer = document.getElementById("results-container");
-      // Clear previous results
-      resultsContainer.innerHTML = "";
-      // Process the data and generate the HTML content for each result
-      var html = "";
-      for (const [title, data] of Object.entries(searchResults)){
-        html += "<div class='result-item'>";
-        //data[0] = image, data[1] = link to actual recipe site, data[2] = recipe summary
-        html += `<a href=${data[1]}><h3>` + title + "</h3></a>";
-        // Include other relevant data from the API response
-        //html += "<p>" + data[0] + "</p>"; 
-        html += "</div>";
+        // Send the GET request to the API
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            // Handle the API response data
+            console.log(data);
+            displayResults(data);
+            // Further processing of the data
+          })
+          .catch((error) => {
+            console.log("An error occurred:", error);
+          });
+      });
+
+      function displayResults(searchResults) {
+        var resultsContainer = document.getElementById("results-container");
+        // Clear previous results
+        resultsContainer.innerHTML = "";
+        // Process the data and generate the HTML content for each result
+        var html = "";
+        for (const [title, data] of Object.entries(searchResults)) {
+          html += "<div class='result-item'>";
+          //data[0] = image, data[1] = link to actual recipe site, data[2] = recipe summary
+          html += `<a href=${data[1]}><h3>` + title + "</h3></a>";
+          // Include other relevant data from the API response
+          //html += "<p>" + data[0] + "</p>";
+          html += "</div>";
+        }
+        // Update the results container with the generated HTML content
+        resultsContainer.innerHTML = html;
       }
-      // Update the results container with the generated HTML content
-      resultsContainer.innerHTML = html;
-    }
-  </script>
-  
-</body>
+    </script>
+  </body>
 </html>
