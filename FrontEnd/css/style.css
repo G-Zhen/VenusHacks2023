@@ -38,8 +38,14 @@ body {
   font-size: 40px;
   text-decoration: none;
   color: #000000;
-  border: #000000 2px solid;
+  border: #eae5e5 2px solid;
   padding: 10px 20px;
+  border-radius: 100%;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  background: #eae5e5;
+
 }
 
 .button:hover {
