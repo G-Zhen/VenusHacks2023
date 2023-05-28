@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>The Team</title>
   </head>
+
+  <style>
+    .pill-container {
+        margin-top:0px;
+        display: flex;
+        justify-content: center;
+      }
+
+    .pill{
+      font-size: 38px;
+      font-family: "Bellota Text", cursive;
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      border-radius:1em;
+      border:none;
+      outline:none;
+      background: rgb(255, 255, 255);
+      cursor:pointer;
+    }
+
+    .pill:not(.pill--selected)hover{
+      background: #cccccc;
+    }
+
+    .pill--selected{
+      font-family: "Bellota Text", cursive;
+      background: #000000;
+      color: #fff;
+
+    }
+
+  </style>
+
+
+
   <body>
+    <header id="mission">
+    <div id="missionhead">
+      <button class="pill" type="submit" onclick="navigateToAboutUs()">Back</button> <h1>Our Mission</h1> <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Get Cooking</button>
+  </div>
       <p>
         Navigating college life can be a challenging endeavor, and one
         additional hurdle is finding sustenance when hunger strikes. This is
@@ -18,3 +57,14 @@
         healthy and well-fed lifestyle, empowering users to make nutritious
         choices that fuel their bodies and support their overall well-being.
       </p>
+    <h2> Collaborators </h2>
+    <div class="pill-container">
+      <button class="pill" type="submit" onclick="navigateToAboutUs()">Jamie Phan</button>
+      <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Sabrina Tang</button>
+    </div>
+    <div class="pill-container">
+      <button class="pill" type="submit" onclick="navigateToAboutUs()">Grace Zhen</button>
+      <button class="pill pill--selected" type="submit" onClick="myFunction()" value="HOME">Lilya Chakhoyan</button>
+    </div>
+    </header>
+    </body>
