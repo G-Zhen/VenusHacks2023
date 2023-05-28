@@ -1,7 +1,10 @@
 # VenusHacks2023
 
-<h1> MealsForMe </h1>
-Weekly meal budget planner. 
+<h1> Meals4Me </h1>
+Daily meal planner for breakfast, lunch, dinner, snacks.
+Navigating college life is difficult, to say the least. What's even harder is navigating it with an empty stomach. That's why we created Meals4Me. 
+Meals4Me helps students, or anyone, with choosing a meal for the day whether you're craving breakfast, lunch, dinner, or a snack. We hope this will encourages users to stay healthy and well-fed.
+
 
 <h2> Front-end </h2>
 Web app
