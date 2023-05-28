@@ -10,7 +10,7 @@ Grace Zhen, Jamie Phan, Sabrina Tang, Lilya Chakhoyan
 
 <h2> Front-end </h2>
 Web site with 3 pages: a main page "Meals4Me" that links to other pages in our site, an "The Team" page with site mission and member LinkedIns, and the main functionality of our site that generates recipes in "Create Meals4Me". <br />
-This site's front end was developed with only HTML, CSS, and JavaScript.
+This site's front end was developed with HTML, CSS, and JavaScript. JavaScript implemented inside HTML files.
 
 <h2> Back-end </h2>
 This site uses the spoonacular recipe and food API: https://spoonacular.com/food-api and Flask to provide routing capabilities to map URLs to implement the API <br />
