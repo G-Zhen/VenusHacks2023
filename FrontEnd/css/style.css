@@ -9,6 +9,7 @@ body {
 }
 
 #welcome {
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: url("../images/homepage.png");
   background-size: cover;
   background-position: center;
@@ -34,7 +35,7 @@ body {
 }
 
 #welcome .button {
-  font-size: 20px;
+  font-size: 40px;
   text-decoration: none;
   color: #000000;
   border: #000000 2px solid;
