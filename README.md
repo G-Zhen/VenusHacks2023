@@ -29,7 +29,7 @@ python app.py
 ```
 After running app.py, run homepage.html file by opening the actual file.  
 
-<h1> Git basics for members </h1>
+<h2> Git basics for members </h2>
 <h3> Setup </h3>
     1. Download the repo: **git clone [url: grab the url from the green "<> Code" button]** <br />
     2. Move to repo, go to terminal and type: **cd VenusHacks2023**
