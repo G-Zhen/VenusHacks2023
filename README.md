@@ -21,11 +21,14 @@ You must always run app.py for the buttons in our Create Meals4Me page.
 Run app.py (for Mac OS): 
 
 ```
-cd BackEnd
-pip install -r requirements.txt
-source venv/bin/activate
-python app.py
-
+#download virtual environment
+    python -m venv .venv
+#activate the virtual environment
+    source venv/bin/activate
+# download everything you need for the flask app
+    pip install -r BackEnd/requirements.txt
+#run app
+    python app.py
 ```
 After running app.py, run homepage.html file by opening the actual file.  
 
