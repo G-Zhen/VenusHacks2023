@@ -24,7 +24,7 @@ Run app.py (for Mac OS):
 #download virtual environment
     python -m venv .venv
 #activate the virtual environment. This is the Mac command
-    source venv/bin/activate
+    source ./venv/bin/activate
 # download everything you need for the flask app
     pip install -r BackEnd/requirements.txt
 #run app
